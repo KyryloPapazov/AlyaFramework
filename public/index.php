@@ -7,5 +7,8 @@ if(PHP_MAJOR_VERSION < 8)
 
 require_once dirname(__DIR__) . '/config/init.php';
 
-echo 'test';
+new \kpo\App();
 
+echo \kpo\App::$app->getProperty('pagination') . "<br>";
+\kpo\App::$app->setProperty('test', 'test');
+var_dump(\kpo\App::$app->getProperties());
